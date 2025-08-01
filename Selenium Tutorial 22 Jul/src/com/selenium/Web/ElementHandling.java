@@ -20,7 +20,9 @@ public class ElementHandling {
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
  
-		WebElement emailField = driver.findElement(By.id("email"));
+		WebElement emailField = driver.findElement(By.cssSelector("input#email"));
+		
+		WebElement r = driver.findElement(By.xpath("//input[@id='email']"));
 
 		System.out.println(emailField.isDisplayed());
 		
