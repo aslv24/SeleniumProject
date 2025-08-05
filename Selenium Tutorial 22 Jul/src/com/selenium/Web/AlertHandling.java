@@ -28,6 +28,8 @@ public class AlertHandling {
 		System.out.println(alt.getText());
 		
 		alt.accept();
+		
+		
 	}
 
 }
