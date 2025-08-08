@@ -5,13 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class AlertHandling {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		ChromeOptions opt=new ChromeOptions();
+		opt.addArguments("--headless");
 
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(opt);
 
 		driver.manage().window().maximize();
 

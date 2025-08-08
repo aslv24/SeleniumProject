@@ -11,6 +11,7 @@ public class Incognito {
 		
 		ChromeOptions opt=new ChromeOptions();
 		opt.addArguments("--start-maximized","--incognito");
+		
 
 		WebDriver driver=new ChromeDriver(opt);
 

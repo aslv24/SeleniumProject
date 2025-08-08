@@ -15,12 +15,14 @@ public class ExplictWaitDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 		WebDriver driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		driver.get("https://tnpsc.gov.in/home.aspx");
 
@@ -35,14 +37,14 @@ public class ExplictWaitDemo {
 		System.out.println(alt.getText());
 
 		alt.accept();
-		
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		Set<String> windows = driver.getWindowHandles();
 		
 		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 
 		System.out.println(windows.size());
+		
+		wait.until(ExpectedConditions.alertIsPresent());
 	}
 
 }
